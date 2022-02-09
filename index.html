@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/imageedit_1_9727572505.png">
+    <title>ITBootcamp Chat</title>
+</head>
+
+<body>
+    <!-- Header sa H1 i H2 -->
+    <header>
+        <h1>ITBootcamp
+            <img src="Images/cap.png" alt="cap">
+        </h1>
+        <h2>Choose a chatroom</h2>
+
+    </header>
+
+    <!-- NAV sekcija sa 4 imena soba -->
+    <section class="nav_bar_section">
+        <ul>
+            <li><a href="#" id="general">#general</a></li>
+            <li><a href="#" id="js">#js</a></li>
+            <li><a href="#" id="homeworks">#homeworks</a></li>
+            <li><a href="#" id="tests">#tests</a></li>
+        </ul>
+    </section>
+
+    <!-- Polje namenjeno za CHAT ROOM -->
+    <section class="chat_room_area">
+        <div class="chat_room_text">
+            <!-- OVDE CE SE NALAZITI PORUKE -->
+            <img id="snowman" src="Images/snowman1.png" alt="">
+        </div>
+        <input type="color" value="#FFFFFF" id="colorB">
+    </section>
+
+    <!-- Sekcija sa 2 forme, u svakoj po text input i submit -->
+    <section class="form_inputs">
+        <!-- Forma zaodredjivanje vremena poruka -->
+        <form action="#" class="date_input">
+            <input type="datetime-local" class="firstDate">
+            <input type="datetime-local" class="secondDate">
+            <input type="submit" value="Get Dates" class="getDates">
+        </form>
+        <!-- Forma sa unos zeljene poruke -->
+        <form action="#" class="msg_input">
+            <textarea name="" class="yourMessage" cols="30" rows="10" placeholder="Your message"></textarea>
+            <!-- <input type="text" placeholder="Your message" class="yourMessage" autocomplete="on"> -->
+            <input type="submit" value="Send" class="send">
+        </form>
+        <!-- Forma za unos username-a koje zelimo da promenimo -->
+        <form action="#" class="username_input">
+            <input type="text" placeholder="Update your username" autocomplete="off">
+            <input type="submit" value="Update" class="update">
+            <footer id="changedUsername"></footer>
+        </form>
+    </section>
+    <nav class="social">
+        <a href="https://github.com/casualme7" target="_blank" class="fab fa-github"></a>
+        <a href="https://www.linkedin.com/in/miljan-pantovic-5b24081b4/" target="_blank" class="fab fa-linkedin"></a>
+        <a href="https://www.instagram.com/miljanpantoviic/?hl=sr" target="_blank" class="fab fa-instagram"></a>
+    </nav>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCwEoGevK7k01q8wgoDYlcMwjzvV-RwbYA",
+            authDomain: "myfirstproject-198bb.firebaseapp.com",
+            projectId: "myfirstproject-198bb",
+            storageBucket: "myfirstproject-198bb.appspot.com",
+            messagingSenderId: "411401980078",
+            appId: "1:411401980078:web:7b861a44206b7a107dc53f",
+            measurementId: "G-GJRZQRGH7J"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let db = firebase.firestore();
+    </script>
+
+    <script src="https://kit.fontawesome.com/1ff859cf8f.js" crossorigin="anonymous"></script>
+    <!-- <script src="app3.js"></script> -->
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
