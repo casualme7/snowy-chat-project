@@ -1,1 +1,1 @@
-Hosted on netlify: https://snowy-chat-project.netlify.app/
+Hosted on Netlify: https://snowy-chat-project.netlify.app/
