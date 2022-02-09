@@ -135,15 +135,12 @@ headerAll.addEventListener("click", (e) => {
 // Brisanje chat-a
 chatRoomArea.addEventListener("click", (del) => {
     let delT = del.target;
-    console.log(chatroom.username);
-    console.log(delT.parentElement.childNodes[1].childNodes[0].innerText.slice(0, - 2));
     if (delT.tagName === "IMG") {
         if (chatroom.username === delT.parentElement.childNodes[1].childNodes[0].innerText.slice(0, - 2)) {
             if (confirm("Delete message permanently?")) {
                 chatroom.deleteMsg(del.target.parentElement.id);
                 del.target.parentElement.remove();
                 removeSound.play();
-                console.log("izbrisan iz baze");
             }
         } else {
             del.target.parentElement.remove();
